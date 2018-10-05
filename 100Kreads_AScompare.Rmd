@@ -1,0 +1,176 @@
+---
+title: "CompareBismarkAlignments"
+author: "Shelly Trigg"
+date: "10/4/2018"
+output: 
+md_document:
+  variant: markdown_github
+---
+
+```{r setup, include = FALSE }
+library(methylKit)
+```
+
+Read in Bismark alignments  
+```{r}
+file.list=list("/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_1_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_2_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_3_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_4_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_5_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_6_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_7_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_8_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_9_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt2/zr2096_10_dedup.sorted.bam")
+
+file.list2=list("/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_1_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_2_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_3_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_4_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_5_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_6_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_7_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_8_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_9_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt3/zr2096_10_dedup.sorted.bam")
+
+
+file.list3=list("/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_1_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_2_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_3_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_4_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_5_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_6_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_7_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_8_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_9_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt4/zr2096_10_dedup.sorted.bam")
+
+
+file.list4=list("/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_1_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_2_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_3_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_4_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_5_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_6_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_7_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_8_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_9_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt5/zr2096_10_dedup.sorted.bam")
+
+
+file.list5=list("/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_1_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_2_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_3_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_4_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_5_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_6_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_7_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_8_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_9_dedup.sorted.bam",
+               "/Volumes/web/metacarcinus/Cvirginica/Bismark_attempt6/zr2096_10_dedup.sorted.bam")
+```
+
+Read methylation calls from Bismark alignments  
+```{r}
+myobj <- processBismarkAln(location = file.list, sample.id = list("1","2","3","4","5","6","7","8","9","10"), 
+                          assembly = "v3", read.context="CpG", mincov=3, treatment = c(0,0,0,0,0,1,1,1,1,1))
+myobj2 <- processBismarkAln(location = file.list2, sample.id = list("1","2","3","4","5","6","7","8","9","10"), 
+                            assembly = "v3", read.context="CpG", mincov=3, treatment = c(0,0,0,0,0,1,1,1,1,1))
+myobj3 <- processBismarkAln(location = file.list3, sample.id = list("1","2","3","4","5","6","7","8","9","10"), 
+                            assembly = "v3", read.context="CpG", mincov=3, treatment = c(0,0,0,0,0,1,1,1,1,1))
+myobj4 <- processBismarkAln(location = file.list4, sample.id = list("1","2","3","4","5","6","7","8","9","10"), 
+                            assembly = "v3", read.context="CpG", mincov=3, treatment = c(0,0,0,0,0,1,1,1,1,1))
+myobj5 <- processBismarkAln(location = file.list5, sample.id = list("1","2","3","4","5","6","7","8","9","10"), 
+                            assembly = "v3", read.context="CpG", mincov=3, treatment = c(0,0,0,0,0,1,1,1,1,1))
+```
+
+calculate region coverage  
+```{r}
+tiles <- tileMethylCounts(myobj,win.size=1000,step.size=1000)
+tiles2 <- tileMethylCounts(myobj2,win.size=1000,step.size=1000)
+tiles3 <- tileMethylCounts(myobj3,win.size=1000,step.size=1000)
+tiles4 <- tileMethylCounts(myobj4,win.size=1000,step.size=1000)
+tiles5 <- tileMethylCounts(myobj5,win.size=1000,step.size=1000)
+```
+
+find regions covered by all samples for each analysis
+```{r}
+mmeth <- unite(tiles, min.per.group = 1L)
+mmeth2 <- unite(tiles2, min.per.group = 1L)
+mmeth3 <- unite(tiles3, min.per.group = 1L)
+mmeth4 <- unite(tiles4, min.per.group = 1L)
+mmeth5 <- unite(tiles5, min.per.group = 1L)
+```
+
+make data frames for each analysis with chromosome positions, region start site (bp), and region end site (bp)  
+```{r}
+RegionsCovered <- getData(mmeth)[,1:3]
+RegionsCovered2 <- getData(mmeth2)[,1:3]
+RegionsCovered3 <- getData(mmeth3)[,1:3]
+RegionsCovered4 <- getData(mmeth4)[,1:3]
+RegionsCovered5 <- getData(mmeth5)[,1:3]
+```
+
+calculate sum of total coverage across all samples for each analysis 
+```{r}
+RegionsCovered$cov_sum <- rowSums(getData(mmeth)[,grep("coverage", colnames(getData(mmeth)))], na.rm = TRUE)
+RegionsCovered2$cov_sum <- rowSums(getData(mmeth2)[,grep("coverage", colnames(getData(mmeth2)))], na.rm = TRUE)
+RegionsCovered3$cov_sum <- rowSums(getData(mmeth3)[,grep("coverage", colnames(getData(mmeth3)))], na.rm = TRUE)
+RegionsCovered4$cov_sum <- rowSums(getData(mmeth4)[,grep("coverage", colnames(getData(mmeth4)))], na.rm = TRUE)
+RegionsCovered5$cov_sum <- rowSums(getData(mmeth5)[,grep("coverage", colnames(getData(mmeth5)))], na.rm = TRUE)
+```
+
+create a column with analysis name (AS = alignment score parameter(1.2=0,-1.2;0.6 = 0,-0.6; 2 = 0,-2), I = minimum insert size (bp))
+```{r}
+RegionsCovered$par <- "AS1.2"
+RegionsCovered2$par <- "AS0.6"
+RegionsCovered3$par <- "AS2"
+RegionsCovered4$par <- "AS1.2I60"
+RegionsCovered5$par <- "AS1.2I150"
+```
+
+create a table with total coverage in all analyses for plotting 
+```{r}
+allRegionsCovered <- rbind(RegionsCovered,RegionsCovered2, RegionsCovered3, RegionsCovered4, RegionsCovered5)
+```
+
+plot the read coverage across all chromosome positions 
+```{r, echo=FALSE}
+ggplot(allRegionsCovered, aes(start, cov_sum,10))  + geom_point(aes(colour = par, shape = par), alpha = 0.7) + scale_color_manual(values = c("orange","green","blue", "magenta","darkgray")) + xlab("position") + ylab("coverage") + facet_wrap(~chr)
+```
+plot the log10 read coverage across all chromosome positions  
+```{r, echo=FALSE}
+ggplot(allRegionsCovered, aes(start, log(cov_sum,10)))  + geom_point(aes(colour = par, shape = par), alpha = 0.7) + scale_color_manual(values = c("orange","green","blue", "magenta","darkgray")) + xlab("position") + ylab("coverage") + facet_wrap(~chr)
+```
+
+
+plot % methylation per region  
+```{r}
+getMethylationStats(tiles[[1]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[2]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[3]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[4]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[5]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[6]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[7]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[8]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[9]],plot = TRUE, both.strands = FALSE)
+getMethylationStats(tiles[[10]],plot = TRUE, both.strands = FALSE)
+```
+
+plot read coverage per region
+```{r}
+getCoverageStats(tiles[[1]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[2]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[3]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[4]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[5]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[6]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[7]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[8]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[9]],plot = TRUE, both.strands = FALSE)
+getCoverageStats(tiles[[10]],plot = TRUE, both.strands = FALSE)
+```
+
