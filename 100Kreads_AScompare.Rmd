@@ -9,6 +9,7 @@ md_document:
 
 ```{r setup, include = FALSE }
 library(methylKit)
+library(ggplot2)
 ```
 
 Read in Bismark alignments  
@@ -138,13 +139,24 @@ allRegionsCovered <- rbind(RegionsCovered,RegionsCovered2, RegionsCovered3, Regi
 
 plot the read coverage across all chromosome positions 
 ```{r, echo=FALSE}
-ggplot(allRegionsCovered, aes(start, cov_sum,10))  + geom_point(aes(colour = par, shape = par), alpha = 0.7) + scale_color_manual(values = c("orange","green","blue", "magenta","darkgray")) + xlab("position") + ylab("coverage") + facet_wrap(~chr)
-```
+#make list of unique chrms for plotting
+chrms <- data.frame(unique(allRegionsCovered$chr))
+for(i in 1:nrow(chrms)){
+  print(ggplot(allRegionsCovered[which(allRegionsCovered$chr == chrms[i,1]),], aes(start,cov_sum))  +
+    geom_point(aes(colour = par, shape = par), alpha = 0.7) +
+    scale_color_manual(values = c("orange","green","blue", "magenta","darkgray")) +
+    xlab("chromosome position (bp)") + ylab("coverage (# of reads)") + ggtitle(chrms[i,1]))
+}
+```  
+
 plot the log10 read coverage across all chromosome positions  
 ```{r, echo=FALSE}
-ggplot(allRegionsCovered, aes(start, log(cov_sum,10)))  + geom_point(aes(colour = par, shape = par), alpha = 0.7) + scale_color_manual(values = c("orange","green","blue", "magenta","darkgray")) + xlab("position") + ylab("coverage") + facet_wrap(~chr)
+for(i in 1:nrow(chrms)){
+  print(ggplot(allRegionsCovered[which(allRegionsCovered$chr == chrms[i,1]),],aes(start,log(cov_sum,10)))  + geom_point(aes(colour = par, shape = par), alpha = 0.7) + 
+    scale_color_manual(values = c("orange","green","blue", "magenta","darkgray"))+
+    xlab("chromosome position (bp)") + ylab("log10 coverage (# of reads)") + ggtitle(chrms[i,1]))
+}
 ```
-
 
 plot % methylation per region  
 ```{r}
