@@ -1,0 +1,20 @@
+Mapping efficiency:	35.5% 
+Mapping efficiency:	15.6% 
+Mapping efficiency:	25.6% 
+Mapping efficiency:	34.0% 
+Mapping efficiency:	31.2% 
+Mapping efficiency:	32.4% 
+Mapping efficiency:	31.9% 
+Mapping efficiency:	34.8% 
+Mapping efficiency:	30.3% 
+Mapping efficiency:	31.8% 
+Total number duplicated alignments removed:	195026 (3.10%)
+Total number duplicated alignments removed:	113861 (2.52%)
+Total number duplicated alignments removed:	296976 (3.77%)
+Total number duplicated alignments removed:	435847 (4.29%)
+Total number duplicated alignments removed:	163952 (2.16%)
+Total number duplicated alignments removed:	436171 (4.23%)
+Total number duplicated alignments removed:	185029 (2.39%)
+Total number duplicated alignments removed:	307646 (3.00%)
+Total number duplicated alignments removed:	303983 (3.37%)
+Total number duplicated alignments removed:	1209178 (11.64%)

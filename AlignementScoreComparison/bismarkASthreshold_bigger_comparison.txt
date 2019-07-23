@@ -1,0 +1,101 @@
+Sample	Category	AS-1.2	AS-0.6	AS-2	AS-1.2_I60	AS-1.2_I150	
+1	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+1	Number of paired-end alignments with a unique best hit:	55304	35458	79505	52694	16486
+1	Mapping efficiency:	55.3% 	35.5% 	79.5% 	52.7% 	16.5% 
+1	Sequence pairs with no alignments under any condition:	27490	51704	213	31468	78915
+1	Sequence pairs did not map uniquely:	17206	12838	20282	15838	4599
+1	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+1	C methylated in CpG context:	68.8%	72.4%	65.9%	68.8%	64.6%
+1	C methylated in CHG context:	3.2%	2.6%	4.7%	3.2%	3.3%
+1	C methylated in CHH context:	4.0%	2.7%	8.2%	3.9%	4.6%
+1	C methylated in unknown context (CN or CHN):	19.7%	24.2%	26.5%	19.4%	20.4%
+2	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+2	Number of paired-end alignments with a unique best hit:	25623	13744	84845	22900	7693
+2	Mapping efficiency:	25.6% 	13.7% 	84.8% 	22.9% 	7.7% 
+2	Sequence pairs with no alignments under any condition:	66914	81302	573	70581	90152
+2	Sequence pairs did not map uniquely:	7463	4954	14582	6519	2155
+2	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+2	C methylated in CpG context:	69.2%	73.7%	64.0%	69.3%	66.7%
+2	C methylated in CHG context:	3.9%	2.5%	13.6%	3.5%	3.8%
+2	C methylated in CHH context:	7.3%	2.6%	27.5%	5.7%	5.9%
+2	C methylated in unknown context (CN or CHN):	26.3%	23.8%	42.6%	22.4%	20.9%
+3	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+3	Number of paired-end alignments with a unique best hit:	50484	31325	79272	45073	10983
+3	Mapping efficiency:	50.5% 	31.3% 	79.3% 	45.1% 	11.0% 
+3	Sequence pairs with no alignments under any condition:	33358	56828	526	41197	85462
+3	Sequence pairs did not map uniquely:	16158	11847	20202	13730	3555
+3	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+3	C methylated in CpG context:	70.2%	74.3%	67.2%	70.0%	63.0%
+3	C methylated in CHG context:	3.4%	2.6%	6.3%	3.2%	3.8%
+3	C methylated in CHH context:	5.4%	2.8%	14.2%	4.9%	7.4%
+3	C methylated in unknown context (CN or CHN):	20.9%	23.2%	34.6%	18.8%	20.0%
+4	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+4	Number of paired-end alignments with a unique best hit:	55171	34892	78192	51869	16093
+4	Mapping efficiency:	55.2% 	34.9% 	78.2% 	51.9% 	16.1% 
+4	Sequence pairs with no alignments under any condition:	26540	51558	310	31536	79129
+4	Sequence pairs did not map uniquely:	18289	13550	21498	16595	4778
+4	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+4	C methylated in CpG context:	76.3%	80.0%	73.2%	76.2%	71.6%
+4	C methylated in CHG context:	3.1%	2.5%	4.5%	3.1%	3.5%
+4	C methylated in CHH context:	3.8%	2.4%	7.9%	3.8%	5.0%
+4	C methylated in unknown context (CN or CHN):	18.7%	22.4%	25.3%	18.4%	20.0%
+5	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+5	Number of paired-end alignments with a unique best hit:	56412	35879	78339	51868	14079
+5	Mapping efficiency:	56.4% 	35.9% 	78.3% 	51.9% 	14.1% 
+5	Sequence pairs with no alignments under any condition:	25464	50638	695	32383	81720
+5	Sequence pairs did not map uniquely:	18124	13483	20966	15749	4201
+5	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+5	C methylated in CpG context:	65.5%	69.6%	62.3%	65.2%	60.1%
+5	C methylated in CHG context:	3.0%	2.4%	4.9%	3.0%	3.4%
+5	C methylated in CHH context:	4.3%	2.7%	8.8%	4.2%	6.4%
+5	C methylated in unknown context (CN or CHN):	18.4%	22.1%	26.7%	18.1%	19.5%
+6	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+6	Number of paired-end alignments with a unique best hit:	53779	33466	79734	50679	14504
+6	Mapping efficiency:	53.8% 	33.5% 	79.7% 	50.7% 	14.5% 
+6	Sequence pairs with no alignments under any condition:	29695	54437	374	34356	81332
+6	Sequence pairs did not map uniquely:	16526	12097	19892	14965	4164
+6	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+6	C methylated in CpG context:	67.1%	71.1%	63.8%	66.9%	61.6%
+6	C methylated in CHG context:	3.2%	2.6%	5.0%	3.2%	3.5%
+6	C methylated in CHH context:	4.1%	2.6%	9.1%	4.0%	5.1%
+6	C methylated in unknown context (CN or CHN):	19.5%	21.8%	27.5%	19.1%	19.7%
+7	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+7	Number of paired-end alignments with a unique best hit:	56844	35383	78624	52453	14166
+7	Mapping efficiency:	56.8% 	35.4% 	78.6% 	52.5% 	14.2% 
+7	Sequence pairs with no alignments under any condition:	25108	51529	323	31628	81561
+7	Sequence pairs did not map uniquely:	18048	13088	21053	15919	4273
+7	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+7	C methylated in CpG context:	72.8%	77.7%	69.2%	72.6%	68.1%
+7	C methylated in CHG context:	3.2%	2.6%	4.6%	3.2%	3.6%
+7	C methylated in CHH context:	4.2%	2.7%	8.1%	4.2%	5.8%
+7	C methylated in unknown context (CN or CHN):	18.4%	22.7%	24.6%	18.0%	19.4%
+8	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+8	Number of paired-end alignments with a unique best hit:	53463	33107	80059	50979	16821
+8	Mapping efficiency:	53.5% 	33.1% 	80.1% 	51.0% 	16.8% 
+8	Sequence pairs with no alignments under any condition:	30401	55205	386	34216	78580
+8	Sequence pairs did not map uniquely:	16136	11688	19555	14805	4599
+8	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+8	C methylated in CpG context:	71.0%	75.0%	67.3%	70.9%	66.7%
+8	C methylated in CHG context:	3.3%	2.7%	5.0%	3.3%	3.6%
+8	C methylated in CHH context:	4.1%	2.7%	8.6%	4.1%	5.1%
+8	C methylated in unknown context (CN or CHN):	18.5%	21.6%	25.7%	18.1%	19.8%
+9	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+9	Number of paired-end alignments with a unique best hit:	48884	30256	81008	45836	14354
+9	Mapping efficiency:	48.9% 	30.3% 	81.0% 	45.8% 	14.4% 
+9	Sequence pairs with no alignments under any condition:	36530	59165	385	40924	81679
+9	Sequence pairs did not map uniquely:	14586	10579	18607	13240	3967
+9	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+9	C methylated in CpG context:	66.1%	69.9%	63.0%	65.9%	61.8%
+9	C methylated in CHG context:	3.3%	2.7%	6.1%	3.3%	3.4%
+9	C methylated in CHH context:	4.7%	2.9%	12.8%	4.4%	5.9%
+9	C methylated in unknown context (CN or CHN):	20.0%	22.8%	32.1%	18.9%	20.5%
+10	Sequence pairs analysed in total:	100000	100000	100000	100000	100000
+10	Number of paired-end alignments with a unique best hit:	52449	32194	79357	49112	14107
+10	Mapping efficiency:	52.4% 	32.2% 	79.4% 	49.1% 	14.1% 
+10	Sequence pairs with no alignments under any condition:	30963	55792	540	35939	81677
+10	Sequence pairs did not map uniquely:	16588	12014	20103	14949	4216
+10	Sequence pairs which were discarded because genomic sequence could not be extracted:	0	0	0	0	0
+10	C methylated in CpG context:	75.8%	79.5%	72.4%	75.7%	70.4%
+10	C methylated in CHG context:	3.5%	2.9%	5.2%	3.4%	3.6%
+10	C methylated in CHH context:	4.2%	2.8%	8.8%	4.1%	5.3%
+10	C methylated in unknown context (CN or CHN):	19.5%	23.2%	27.3%	19.1%	20.9%
